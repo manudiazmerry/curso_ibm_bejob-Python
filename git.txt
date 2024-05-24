@@ -1,8 +1,12 @@
+
+
 git init
 
 git add .
 
 git commit -m "primera version"
+
+(git commit -am “descripción” para add y commit en un solo paso)
 
 git remote add origin https://github.com/manudiazmerry/curso_ibm_dh-Python.git
 
@@ -16,3 +20,28 @@ git branch nombre_rama
 git checkout nombre_rama
 
 git merge nombre_rama
+
+
+
+git status -status
+
+git log –oneline
+git reset –hard [código versión a la que queremos volver]
+
+git clone "url de github"
+
+
+
+
+git push <remote> <branch> envia del local al remoto
+git push <remote> <all>
+git push <remote> <tags>
+
+git pull NOMBRE-REMOTo NOMBRE-RAMA  envia del remoto al local
+
+
+FORK es como un clone de otro repositorio pero lo hace en un repositorio nuevo independiente (luego se puede solicitar fusionar)
+
+
+
+

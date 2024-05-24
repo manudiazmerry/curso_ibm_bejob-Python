@@ -1,0 +1,21 @@
+
+
+
+git branch nombre_rama
+
+git branch (ver ramas y activa o actual)
+
+git checkout nombreRama (cambiar a una rama)
+
+
+
+git branch -d “nombre de mi rama” (para borrar una rama)
+
+
+git merge segundaRama (para fusionar a la rama activa (se hace a la master o main normarlmente) la segundaRama)
+
+puede haber conflicto si hay cosas dif en una rama y otra, hay que arreglarlo a mano, visual studio nos ayuda a mostrar el conflicto y elegir cual interesa
+
+
+
+
