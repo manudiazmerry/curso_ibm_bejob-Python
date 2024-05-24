@@ -9,3 +9,10 @@ git remote add origin https://github.com/manudiazmerry/curso_ibm_dh-Python.git
 git push -u origin master
 
 git pull
+
+
+git branch nombre_rama
+
+git checkout nombre_rama
+
+git merge nombre_rama
