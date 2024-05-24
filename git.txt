@@ -1,0 +1,11 @@
+git init
+
+git add .
+
+git commit -m "primera version"
+
+git remote add origin https://github.com/manudiazmerry/curso_ibm_dh-Python.git
+
+git push -u origin master
+
+git pull
