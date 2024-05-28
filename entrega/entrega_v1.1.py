@@ -48,37 +48,26 @@ tarea_02 = Tarea('poner lavadora',gn_id_tarea)
 tarea_02.is_completada = True
 print(tarea_02)
 
-#-----------------------------------------------------------------------------------Menu
-def menu():
 
-    while True:
-        print('\n')
-        print('___Menú____________________ introduzca número de opción y pulse enter:')
-        print('1. Añadir tarea nueva')
-        print('2. Modificar tarea')
-        print('3. Marcar tarea como completada')
-        print('4. Mostrar lista de tareas')
-        print('5. Eliminar tarea')
-        print('6. Salir')
+class Tarea:
+    def __init__(self, descripcion):
+        """
+        Inicializa una nueva tarea con una descripción y un estado de no completada.
+        
+        :param descripcion: Descripción de la tarea.
+        """
+        self.descripcion = descripcion
+        self.completada = False
 
-        try:
-            opcion = int(input('Seleccione una opción: '))
+    def marcar_como_completada(self):
+        """
+        Marca la tarea como completada.
+        """
+        self.completada = True
 
-            if opcion == 1:
-                descripcion = input('Ingrese la descripción de la nueva tarea: ')
-                lista_de_tareas.agregar_tarea(descripcion)
-            elif opcion == 2:
-                posicion = int(input('Ingrese el número de la tarea a marcar como completada: '))
-                lista_de_tareas.marcar_tarea_como_completada(posicion)
-            elif opcion == 3:
-                lista_de_tareas.mostrar_tareas()
-            elif opcion == 4:
-                posicion = int(input('Ingrese el número de la tarea a eliminar: '))
-                lista_de_tareas.eliminar_tarea(posicion)
-            elif opcion == 5:
-                print('Saliendo del programa...')
-                break
-            else:
-                print('Opción no válida. Por favor, intente nuevamente.')
-        except ValueError:
-            print('Error: Debe ingresar un número.')
+    def __str__(self):
+        """
+        Devuelve una representación en cadena de la tarea, mostrando su estado.
+        """
+        estado = "Completada" if self.completada else "Pendiente"
+        return f"{self.descripcion} - {estado}"
